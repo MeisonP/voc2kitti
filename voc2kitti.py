@@ -33,7 +33,7 @@ def readXmlAnno(im_fn, ann_DIR):
 
     l_obj = []
     for obj in root.findall('object'):
-        d_obj = {"name": obj.find('name').text, "truncated": '0.0', "difficult": '0.0', "occluded":'0.0',
+        d_obj = {"name": obj.find('name').text, "truncated": '0.0', "difficult": '0.0', "occluded":'0',
                  "xmin": float(obj.find('bndbox').find('xmin').text),
                  "ymin": float(obj.find('bndbox').find('ymin').text),
                  "xmax": float(obj.find('bndbox').find('xmax').text),
